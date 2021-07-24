@@ -1,8 +1,15 @@
 import axios from 'axios';
 import { all, call, fork, put, takeEvery } from 'redux-saga/effects';
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from '../types';
+import {
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  LOGOUT_SUCCESS,
+  LOGOUT_FAILURE,
+  LOGOUT_REQUEST,
+} from '../types';
 
-//LOGIN
+// LOGIN
 
 const loginUserApi = (loginData) => {
   console.log(loginData, 'loginData');
@@ -34,6 +41,25 @@ function* watchLoginUser() {
   yield takeEvery(LOGIN_REQUEST, loginUser);
 }
 
+// LOGOUT
+
+function* logout(action) {
+  try {
+    yield put({
+      type: LOGOUT_SUCCESS,
+    });
+  } catch (e) {
+    yield put({
+      type: LOGOUT_FAILURE,
+    });
+    console.log(e);
+  }
+}
+
+function* watchLogout() {
+  yield takeEvery(LOGOUT_REQUEST, loginUser);
+}
+
 export default function* authSaga() {
-  yield all([fork(watchLoginUser)]);
+  yield all([fork(watchLoginUser), fork(watchLogout)]);
 }
