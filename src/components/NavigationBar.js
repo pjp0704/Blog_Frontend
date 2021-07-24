@@ -37,7 +37,7 @@ const NavigationBar = () => {
           </Link>
           <NavbarToggler onClick={handleToggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="ml-auto d-felx justify-content-around" navbar>
+            <Nav className="ml-auto d-flex justify-content-around" navbar>
               {isAuthenticated ? (
                 <h1 className="text-white">(authLink)</h1>
               ) : (
