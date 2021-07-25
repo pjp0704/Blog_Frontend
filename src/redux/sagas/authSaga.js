@@ -60,7 +60,7 @@ function* logout(action) {
 }
 
 function* watchLogout() {
-  yield takeEvery(LOGOUT_REQUEST, loginUser);
+  yield takeEvery(LOGOUT_REQUEST, logout);
 }
 
 // Load user
