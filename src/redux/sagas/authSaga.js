@@ -7,6 +7,9 @@ import {
   LOGOUT_SUCCESS,
   LOGOUT_FAILURE,
   LOGOUT_REQUEST,
+  LOAD_USER_REQUEST,
+  LOAD_USER_SUCCESS,
+  LOAD_USER_FAILURE,
 } from '../types';
 
 // LOGIN
@@ -60,6 +63,40 @@ function* watchLogout() {
   yield takeEvery(LOGOUT_REQUEST, loginUser);
 }
 
+// Load user
+
+const loadUserApi = (loadData) => {
+  const token = loadData.payload;
+  const config = {
+    headers: {
+      'content-type': 'application/json',
+    },
+  };
+  if (token) {
+    config.headers.Authorization = token;
+  }
+  return axios.get('api/user/detail', config);
+};
+
+function* loadUser(action) {
+  try {
+    const result = yield call(loadUserApi, action.payload);
+    yield put({
+      type: LOAD_USER_SUCCESS,
+      payload: result.data,
+    });
+  } catch (e) {
+    yield put({
+      type: LOAD_USER_FAILURE,
+      payload: e.response,
+    });
+  }
+}
+
+function* watchLoadUser() {
+  yield takeEvery(LOAD_USER_REQUEST, loadUser);
+}
+
 export default function* authSaga() {
-  yield all([fork(watchLoginUser), fork(watchLogout)]);
+  yield all([fork(watchLoginUser), fork(watchLogout), fork(watchLoadUser)]);
 }
