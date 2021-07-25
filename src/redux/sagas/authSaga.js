@@ -73,7 +73,7 @@ const loadUserApi = (loadData) => {
     },
   };
   if (token) {
-    config.headers.Authorization = token;
+    config.headers.Authorization = `Bearer ${token}`;
   }
   return axios.get('api/user/detail', config);
 };
