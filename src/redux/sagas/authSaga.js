@@ -10,6 +10,9 @@ import {
   LOAD_USER_REQUEST,
   LOAD_USER_SUCCESS,
   LOAD_USER_FAILURE,
+  REGISTER_REQUEST,
+  REGISTER_SUCCESS,
+  REGISTER_FAILURE,
 } from '../types';
 
 // LOGIN
@@ -63,6 +66,38 @@ function* watchLogout() {
   yield takeEvery(LOGOUT_REQUEST, logout);
 }
 
+// REGISTER
+
+const registerApi = (request) => {
+  console.log(request, 'request');
+  const config = {
+    headers: {
+      'content-type': 'application/json',
+    },
+  };
+  return axios.post('api/auth', config, request);
+};
+
+function* registerUser(action) {
+  try {
+    const result = yield call(registerApi, action.payload);
+    console.log(result);
+    yield put({
+      type: REGISTER_SUCCESS,
+      payload: result.data,
+    });
+  } catch (e) {
+    yield put({
+      type: REGISTER_FAILURE,
+      payload: e.response,
+    });
+  }
+}
+
+function* watchRegisterUser() {
+  yield takeEvery(REGISTER_REQUEST, registerUser);
+}
+
 // Load user
 
 const loadUserApi = (loadData) => {
@@ -98,5 +133,10 @@ function* watchLoadUser() {
 }
 
 export default function* authSaga() {
-  yield all([fork(watchLoginUser), fork(watchLogout), fork(watchLoadUser)]);
+  yield all([
+    fork(watchLoginUser),
+    fork(watchLogout),
+    fork(watchRegisterUser),
+    fork(watchLoadUser),
+  ]);
 }
