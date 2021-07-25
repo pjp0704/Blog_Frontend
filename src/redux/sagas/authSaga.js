@@ -13,6 +13,9 @@ import {
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
+  CLEAR_ERROR_REQUEST,
+  CLEAR_ERROR_SUCCESS,
+  CLEAR_ERROR_FAILURE,
 } from '../types';
 
 // LOGIN
@@ -132,11 +135,30 @@ function* watchLoadUser() {
   yield takeEvery(LOAD_USER_REQUEST, loadUser);
 }
 
+// CLEAR ERROR
+
+function* clearError() {
+  try {
+    yield put({
+      type: CLEAR_ERROR_SUCCESS,
+    });
+  } catch (e) {
+    yield put({
+      type: CLEAR_ERROR_FAILURE,
+    });
+  }
+}
+
+function* watchClearError() {
+  yield takeEvery(CLEAR_ERROR_REQUEST, clearError);
+}
+
 export default function* authSaga() {
   yield all([
     fork(watchLoginUser),
     fork(watchLogout),
     fork(watchRegisterUser),
     fork(watchLoadUser),
+    fork(watchClearError),
   ]);
 }
