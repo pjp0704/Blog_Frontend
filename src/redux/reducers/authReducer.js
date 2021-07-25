@@ -8,6 +8,9 @@ import {
   LOGOUT_REQUEST,
   LOGOUT_SUCCESS,
   LOGOUT_FAILURE,
+  LOAD_USER_REQUEST,
+  LOAD_USER_SUCCESS,
+  LOAD_USER_FAILURE,
 } from '../types';
 
 const initialState = {
@@ -71,6 +74,32 @@ const authReducer = (state = initialState, action) => {
         isLoading: false,
         userRole: null,
         errorMsg: '',
+      };
+
+    case LOAD_USER_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+      };
+
+    case LOAD_USER_SUCCESS:
+      return {
+        ...state,
+        isAuthenticated: true,
+        isLoading: false,
+        user: action.payload,
+        userId: action.payload._id,
+        userName: action.payload.name,
+        userRole: action.payload.role,
+      };
+
+    case LOAD_USER_FAILURE:
+      return {
+        ...state,
+        user: null,
+        isAuthenticated: false,
+        isLoading: false,
+        userRole: '',
       };
 
     case CLEAR_ERROR_REQUEST:
