@@ -1208,12 +1208,115 @@
   resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@ckeditor/ckeditor5-adapter-ckfinder@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-adapter-ckfinder/-/ckeditor5-adapter-ckfinder-29.0.0.tgz#967bcd8665fd4eae00dbda1eb78dffc25558e212"
+  integrity sha512-n9MRcJIWFoiHpqBEEAYOvDqe9TsN0R040G91UPL8bpe0X82zd5Sy2qxXZSNpzRuo5WLWLDPqBktQmaY7aYYsJA==
+  dependencies:
+    ckeditor5 "^29.0.0"
+
+"@ckeditor/ckeditor5-alignment@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-29.0.0.tgz#7477ef3d5bc2d979cde3abd0bc8f6855704b647d"
+  integrity sha512-NzYaNQQ6v36pY+8idIZuJopN6lhoJ39AVRuOxozuXYAlwF7G9sST2MfOKyKCqnRP7qOHuDDBfx+FyVW7YBsj1Q==
+  dependencies:
+    ckeditor5 "^29.0.0"
+
+"@ckeditor/ckeditor5-autoformat@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-autoformat/-/ckeditor5-autoformat-29.0.0.tgz#637c8158a9dcf6ca914fe11544152f222bc3b7b3"
+  integrity sha512-FiiIbs2pBGoUZuQkmqNtqHTNU2NFRuNWxHmbNwNxZpwXJUk0YU+/UaCJ1jZe1FPu1n40j0+x/fEOn6mbtHDvCg==
+  dependencies:
+    ckeditor5 "^29.0.0"
+
 "@ckeditor/ckeditor5-basic-styles@^29.0.0":
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-basic-styles/-/ckeditor5-basic-styles-29.0.0.tgz#6ac514cc253b849ebeba5216d98689624cdda0ad"
   integrity sha512-BN2eleo5vxyjzDCTwkp3fTAxGpZRoji5KLzwz9NIgolo6vGjdMAwENBhSxieuhhxTyJ/S/CKFt7Z0pGcCRlBxA==
   dependencies:
     ckeditor5 "^29.0.0"
+
+"@ckeditor/ckeditor5-block-quote@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-block-quote/-/ckeditor5-block-quote-29.0.0.tgz#514186db9d460a70b9c71d3709ba3b101ba8b500"
+  integrity sha512-Ow2zyogLTsVWG3+nV77gPYPo+jejcSVYLcC3Iq6hOHarAz2Aw2H20dYJ/3GbDAuK+hnHIP65OUBEa5wgSRx6TA==
+  dependencies:
+    ckeditor5 "^29.0.0"
+
+"@ckeditor/ckeditor5-build-balloon@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-balloon/-/ckeditor5-build-balloon-29.0.0.tgz#9da954c8544a63b4166505503637959bb33e5c45"
+  integrity sha512-jeo0OiNkta3Kp+gYxuaMoQsRV7Znc/KWYkOLeRQuXGz1wSKdsbputPgEXhGexrgEudkNXwQVk4hBqAZik/P9Jg==
+  dependencies:
+    "@ckeditor/ckeditor5-adapter-ckfinder" "^29.0.0"
+    "@ckeditor/ckeditor5-autoformat" "^29.0.0"
+    "@ckeditor/ckeditor5-basic-styles" "^29.0.0"
+    "@ckeditor/ckeditor5-block-quote" "^29.0.0"
+    "@ckeditor/ckeditor5-ckfinder" "^29.0.0"
+    "@ckeditor/ckeditor5-cloud-services" "^29.0.0"
+    "@ckeditor/ckeditor5-easy-image" "^29.0.0"
+    "@ckeditor/ckeditor5-editor-balloon" "^29.0.0"
+    "@ckeditor/ckeditor5-essentials" "^29.0.0"
+    "@ckeditor/ckeditor5-heading" "^29.0.0"
+    "@ckeditor/ckeditor5-image" "^29.0.0"
+    "@ckeditor/ckeditor5-indent" "^29.0.0"
+    "@ckeditor/ckeditor5-link" "^29.0.0"
+    "@ckeditor/ckeditor5-list" "^29.0.0"
+    "@ckeditor/ckeditor5-media-embed" "^29.0.0"
+    "@ckeditor/ckeditor5-paragraph" "^29.0.0"
+    "@ckeditor/ckeditor5-paste-from-office" "^29.0.0"
+    "@ckeditor/ckeditor5-table" "^29.0.0"
+    "@ckeditor/ckeditor5-typing" "^29.0.0"
+
+"@ckeditor/ckeditor5-build-classic@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-classic/-/ckeditor5-build-classic-29.0.0.tgz#1d245a8482d3e4185b386ccf7fa139b53583bdba"
+  integrity sha512-e4aamKWMSYY1Flbpn0Wz3ehSxi0Tc7f1iGiuS0wtX/hjQHkKFVSQ0d43wOP0pHfE+xxqxhAbWPoBXDn/73bmqQ==
+  dependencies:
+    "@ckeditor/ckeditor5-adapter-ckfinder" "^29.0.0"
+    "@ckeditor/ckeditor5-autoformat" "^29.0.0"
+    "@ckeditor/ckeditor5-basic-styles" "^29.0.0"
+    "@ckeditor/ckeditor5-block-quote" "^29.0.0"
+    "@ckeditor/ckeditor5-ckfinder" "^29.0.0"
+    "@ckeditor/ckeditor5-cloud-services" "^29.0.0"
+    "@ckeditor/ckeditor5-easy-image" "^29.0.0"
+    "@ckeditor/ckeditor5-editor-classic" "^29.0.0"
+    "@ckeditor/ckeditor5-essentials" "^29.0.0"
+    "@ckeditor/ckeditor5-heading" "^29.0.0"
+    "@ckeditor/ckeditor5-image" "^29.0.0"
+    "@ckeditor/ckeditor5-indent" "^29.0.0"
+    "@ckeditor/ckeditor5-link" "^29.0.0"
+    "@ckeditor/ckeditor5-list" "^29.0.0"
+    "@ckeditor/ckeditor5-media-embed" "^29.0.0"
+    "@ckeditor/ckeditor5-paragraph" "^29.0.0"
+    "@ckeditor/ckeditor5-paste-from-office" "^29.0.0"
+    "@ckeditor/ckeditor5-table" "^29.0.0"
+    "@ckeditor/ckeditor5-typing" "^29.0.0"
+
+"@ckeditor/ckeditor5-build-inline@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-inline/-/ckeditor5-build-inline-29.0.0.tgz#f119fc4fa8cebbd1b79865511a93ee34af932ca6"
+  integrity sha512-kCjKxpA9DtF9uLLulsfz538/sVwuN4TWGGKCH+aHW9S8KHSXSTQ3zfg+iwatlZrgy3oudJYveR4urLWSNzN46w==
+  dependencies:
+    "@ckeditor/ckeditor5-adapter-ckfinder" "^29.0.0"
+    "@ckeditor/ckeditor5-autoformat" "^29.0.0"
+    "@ckeditor/ckeditor5-basic-styles" "^29.0.0"
+    "@ckeditor/ckeditor5-block-quote" "^29.0.0"
+    "@ckeditor/ckeditor5-ckfinder" "^29.0.0"
+    "@ckeditor/ckeditor5-cloud-services" "^29.0.0"
+    "@ckeditor/ckeditor5-easy-image" "^29.0.0"
+    "@ckeditor/ckeditor5-editor-inline" "^29.0.0"
+    "@ckeditor/ckeditor5-essentials" "^29.0.0"
+    "@ckeditor/ckeditor5-heading" "^29.0.0"
+    "@ckeditor/ckeditor5-image" "^29.0.0"
+    "@ckeditor/ckeditor5-indent" "^29.0.0"
+    "@ckeditor/ckeditor5-link" "^29.0.0"
+    "@ckeditor/ckeditor5-list" "^29.0.0"
+    "@ckeditor/ckeditor5-media-embed" "^29.0.0"
+    "@ckeditor/ckeditor5-paragraph" "^29.0.0"
+    "@ckeditor/ckeditor5-paste-from-office" "^29.0.0"
+    "@ckeditor/ckeditor5-table" "^29.0.0"
+    "@ckeditor/ckeditor5-typing" "^29.0.0"
 
 "@ckeditor/ckeditor5-ckfinder@^29.0.0":
   version "29.0.0"
@@ -1232,6 +1335,13 @@
     "@ckeditor/ckeditor5-utils" "^29.0.0"
     "@ckeditor/ckeditor5-widget" "^29.0.0"
     lodash-es "^4.17.11"
+
+"@ckeditor/ckeditor5-cloud-services@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-cloud-services/-/ckeditor5-cloud-services-29.0.0.tgz#9f6c06c284e267106a2d9fdbdc79a5859e03f0e0"
+  integrity sha512-mIEASKCMU3M/rcmMK0SZTd/k4MU1sSAZ/HpZzQzyLeBc+o/nHwwoBGKFeFk+Rtj+QZyscucB4KPtxy9BDXYUgA==
+  dependencies:
+    ckeditor5 "^29.0.0"
 
 "@ckeditor/ckeditor5-code-block@^29.0.0":
   version "29.0.0"
@@ -1275,6 +1385,24 @@
     terser-webpack-plugin "^3.0.2"
     through2 "^3.0.1"
 
+"@ckeditor/ckeditor5-dev-webpack-plugin@^25.2.6":
+  version "25.2.6"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-dev-webpack-plugin/-/ckeditor5-dev-webpack-plugin-25.2.6.tgz#b5daf83eea841f5cbcdca818c6a76dc550618fd1"
+  integrity sha512-Ihdy4xR9Hk/8SyixYtfoFfK5CQXsNTqoKyKP7J/tAW5s/wzorWxNcLXXUencYzFjq9rTcVAsNBYaNZWwsBeThA==
+  dependencies:
+    "@ckeditor/ckeditor5-dev-utils" "^25.2.6"
+    chalk "^4.0.0"
+    rimraf "^3.0.2"
+    semver "^7.3.4"
+    webpack-sources "^2.0.1"
+
+"@ckeditor/ckeditor5-easy-image@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-easy-image/-/ckeditor5-easy-image-29.0.0.tgz#d9c6255b116bd5a32dc46e9e64d599dcdd8229bc"
+  integrity sha512-S5Knwj0piGtvOcRK7tby1iuY8fHi/Fid68Dp2vliH6xdmYdPAcA1vG/w4iERuvLTh6luWgtIa7L+iV4wsoLxnQ==
+  dependencies:
+    ckeditor5 "^29.0.0"
+
 "@ckeditor/ckeditor5-editor-balloon@^29.0.0":
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-editor-balloon/-/ckeditor5-editor-balloon-29.0.0.tgz#e49492e2e279f63c3080c1419a100655096569ae"
@@ -1287,6 +1415,14 @@
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-editor-classic/-/ckeditor5-editor-classic-29.0.0.tgz#19b574f58c9f5c9917d44f0bf04ed7069daf0569"
   integrity sha512-wn1Y99Fkw/GZYrv2CaYA3pb5SDY8Yr39F6rr/95DpOSzUCrtryHUDvORLVfosAf25rTxka4b+gK9Ts0SKa6K1Q==
+  dependencies:
+    ckeditor5 "^29.0.0"
+    lodash-es "^4.17.15"
+
+"@ckeditor/ckeditor5-editor-inline@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-editor-inline/-/ckeditor5-editor-inline-29.0.0.tgz#f21b0831eb987996b818cd7c19b19fcd790fec5c"
+  integrity sha512-vUXUXdL+435G5vXm97lTdjr7X0tRxSijU4luX+F/2XBkRmUQhuID4XZaDGo8+dN5H4JCRv1CK5nLSMtQydzvPQ==
   dependencies:
     ckeditor5 "^29.0.0"
     lodash-es "^4.17.15"
@@ -1353,6 +1489,15 @@
   dependencies:
     ckeditor5 "^29.0.0"
 
+"@ckeditor/ckeditor5-image@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-image/-/ckeditor5-image-29.0.0.tgz#0b630f66094b9254d06e6344b70942723e51cbe7"
+  integrity sha512-Nth4XGuUED62gnpscCnWC18nXld2OutpTc8h2c711KH/w7DznS3XzDyEhoeJUFw9K+Un70rchOS9FIEnsfRbtA==
+  dependencies:
+    "@ckeditor/ckeditor5-ui" "^29.0.0"
+    ckeditor5 "^29.0.0"
+    lodash-es "^4.17.15"
+
 "@ckeditor/ckeditor5-indent@^29.0.0":
   version "29.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-indent/-/ckeditor5-indent-29.0.0.tgz#e03eaaaefac9ab3ace482008c52f0ff6d76ebe0c"
@@ -1399,6 +1544,13 @@
     "@ckeditor/ckeditor5-core" "^29.0.0"
     "@ckeditor/ckeditor5-ui" "^29.0.0"
     "@ckeditor/ckeditor5-utils" "^29.0.0"
+
+"@ckeditor/ckeditor5-paste-from-office@^29.0.0":
+  version "29.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paste-from-office/-/ckeditor5-paste-from-office-29.0.0.tgz#4d24791264e49d73deaf9065acf313d682681ef0"
+  integrity sha512-vELQ32dK8wPk6vxP2fE9IQIuUJp+gkkKc7yjajcLn/xpzf2+nFe9Qvoqk2V/V14clrtJIHpYoBZ9kkYN/Ng4tg==
+  dependencies:
+    ckeditor5 "^29.0.0"
 
 "@ckeditor/ckeditor5-react@^3.0.2":
   version "3.0.2"
@@ -11137,7 +11289,7 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-source-list-map@^2.0.0:
+source-list-map@^2.0.0, source-list-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz"
   integrity sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==
@@ -12436,6 +12588,14 @@ webpack-sources@^1.1.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0, webpack-
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
+
+webpack-sources@^2.0.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.3.1.tgz#570de0af163949fe272233c2cefe1b56f74511fd"
+  integrity sha512-y9EI9AO42JjEcrTJFOYmVywVZdKVUfOvDUPsJea5GIr1JOEGFVqwlY2K098fFoIjOkDzHn2AjRvM8dsBZu+gCA==
+  dependencies:
+    source-list-map "^2.0.1"
+    source-map "^0.6.1"
 
 webpack@4.44.2:
   version "4.44.2"
