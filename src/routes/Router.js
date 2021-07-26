@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NavigationBar from '../components/NavigationBar';
 import { Container } from 'reactstrap';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import PostCardList from './public/PostCardList';
 import PostWrite from './public/PostWrite';
 import PostDetail from './public/PostDetail';
