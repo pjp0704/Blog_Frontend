@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
   Button,
   Col,
@@ -17,7 +17,6 @@ import Init from '../../components/editor/UploadAdapter';
 const PostWrite = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
   const [form, setValues] = useState({ title: '', contents: '', fileUrl: '' });
-  const dispatch = useDispatch();
 
   const onChange = (e) => {
     setValues({
@@ -26,12 +25,41 @@ const PostWrite = () => {
     });
   };
 
-  const onSubmit = async (e) => {
-    await e.preventDefault();
-    const { title, content, fileUrl, category } = form;
-  };
+  const getDataFromCKEditor = (event, editor) => {
+    const data = editor.getData();
+    if (data && data.match('<img src=')) {
+      const imgStart = data.indexOf('<img src=');
+      let imgEnd = '';
+      let extension = '';
+      let imgUrl = '';
+      const ext_list = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
 
-  const getDataFromCKEditor = (event, editor) => {};
+      for (let i = 0; i < ext_list.length; i++) {
+        if (data.match(ext_list[i])) {
+          extension = ext_list[i];
+          imgEnd = data.indexOf(`${ext_list[i]}`);
+        }
+      }
+
+      if (extension === 'jpeg') {
+        imgUrl = data.substring(imgStart + 10, imgEnd + 4);
+      } else {
+        imgUrl = data.substring(imgStart + 10, imgEnd + 3);
+      }
+
+      setValues({
+        ...form,
+        fileUrl: imgUrl,
+        content: data,
+      });
+    } else {
+      setValues({
+        ...form,
+        fileUrl: 'https://source.unsplash.com/random/301x201',
+        content: data,
+      });
+    }
+  };
 
   return (
     <div>
